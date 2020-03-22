@@ -12,7 +12,7 @@ npm start
 
 ## Usage
 Set the authentication the third party service callback URL as `https://oAuth2-callback-handler-host/callback`.
-The OAuth2 Callback Handler will receive the authentication data and post a message to yuor app with all the parameters sent on URL by the third party sevice you are authenticating.
+The OAuth2 Callback Handler will receive the authentication data and post a message to your app with all the parameters sent on URL by the third party sevice you are authenticating.
 
 See the following example:
 
