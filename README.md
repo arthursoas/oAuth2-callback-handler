@@ -50,3 +50,8 @@ window.addEventListener('message', HandleMessages);
 
 Some frameworks can use messages too, so be sure the message received contains the data you are expecting from the 
 OAuth2 Callback Handler
+
+## Customization
+If you need customize the OAuth2 Callback Handler behavior, create a new module what consumes the CallbackService.
+
+But have in mind that the good pratice is to maintain all your business rules on your application script, and not on the popup. It should be only an intermediary to receive the third party service authentication data and pass it to your application.
