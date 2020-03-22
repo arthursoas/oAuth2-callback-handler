@@ -17,26 +17,30 @@ The OAuth2 Callback Handler will receive the authentication data and post a mess
 See the following example:
 
 The service sends the parameters `code` and `usercorrelator` during the authentication proccess.
-`https://authhandler.myapp.com/callback?code=ffGRret54rFEtgregvfD&usercorrelator=66a617ad-8a8d`
+`https://auth-handler.myapp.com/callback?code=0000000000000&user_correlator=5555555555555`
 
-OAuth2 Callback Handler will notify you app with the following message.
+OAuth2 Callback Handler will notify your app with the following message.
 ```javascript
 {
-  code: "ffGRret54rFEtgregvfD",
-  usercorrelator: "66a617ad-8a8d"
+  code: "0000000000000",
+  user_correlator: "5555555555555"
 }
 ```
 
-To get that message, you can use the [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) method on the page what opened the third party service popup.
+To handle that message, you can use the [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) method on the page what opened the third party service popup.
 
+Example:
 ```javascript
 function HandleMessages(message) {
+  // Remove message listener after message was received
   window.removeEventListener('message', HandleMessages)
+  
   // Do stuff
+  // ...
 }
 
 window.open(
-  "https://auth.thirdipartyiservice.com?client_id=rgRREvgre4&redirect_url=https://oAuth2-callback-handler-host/callback",
+  "https://auth.third-party-service.com?client_id=99999999&redirect_url=https://oAuth2-callback-handler-host/callback",
   'OAuth Example',
   'height=600,width=500');
 
