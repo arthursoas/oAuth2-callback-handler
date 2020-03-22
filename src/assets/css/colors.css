@@ -1,11 +1,11 @@
 .cl-main {
-color: whitesmoke;
+    color: whitesmoke;
 }
 
 .cl-error {
-color: coral;
+    color: coral;
 }
 
 .cl-warning {
-color: navajowhite;
+    color: navajowhite;
 }
