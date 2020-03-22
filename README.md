@@ -1,4 +1,4 @@
-# OAuth2 Callback Handler
+# OAuth2 Callback Handler 🤝
 OAuth2 Callback Handler is a simple react app for handling callbacks during an OAuth 2.0 Authentication proccess.
 
 ## Installation
