@@ -16,7 +16,9 @@ The OAuth2 Callback Handler will receive the authentication data and post a mess
 
 See the following example:
 
-The service sends the parameters `code` and `usercorrelator` during the authentication proccess.
+The service sends the parameters `code` and `user_correlator` during the authentication proccess.
+The callback URL would looks like the following:
+
 `https://auth-handler.myapp.com/callback?code=0000000000000&user_correlator=5555555555555`
 
 OAuth2 Callback Handler will notify your app with the following message.
